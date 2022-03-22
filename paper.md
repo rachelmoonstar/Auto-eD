@@ -60,7 +60,7 @@ the `Auto-eD` package content contains a learning unit for teaching automatic di
 web application based on this software.
 
 This module provides content for students at three different levels of experience.  Advanced students, familiar with both coding
-and automatic differentiation, may use the `Auto-eD` package as described in Auto-eD Visualization Softward.  Students who have
+and automatic differentiation, may use the `Auto-eD` package as described in Auto-eD Visualization Software.  Students who have
 learned the principles behind automatic differentiation but are less comfortable with coding can test and enhance their understanding 
 by using the [web application](https://autoed.herokuapp.com) as described in Web Application.  Students who are new to automatic 
 differentiation and want to learn this concept should work through the automatic differentiation unit (available on 
