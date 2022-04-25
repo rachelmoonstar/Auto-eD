@@ -59,7 +59,8 @@ class ADnum:
             raise ValueError('Value and derivative of ADnum object must be numeric.')
         self.val = value
         self.der = der
-        self.ins = len(self.der)
+        scalarder = (isinstance(der, int) or isinstance(der, float))
+        self.ins = der.size
         self.rder = None
         if 'graph' not in kwargs:
             self.graph = {}

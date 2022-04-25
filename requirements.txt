@@ -7,3 +7,4 @@ pandastable==0.11.0
 gunicorn==20.0.4
 Flask==2.0.3
 Flask-Session==0.3.2
+pytest==6.2.3
