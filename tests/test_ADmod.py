@@ -1,10 +1,9 @@
 import pytest
-import AD20
 import numpy as np
 import networkx as nx
 import matplotlib
 import pandas
-import ADnum
+from ADnum import ADnum
 import ADmath
 import ADgraph
 
@@ -352,7 +351,7 @@ def test_get_labels():
     Y = ADmath.sin(X)+3
     labs = ADgraph.get_labels(Y)
     assert labs[X] == 'X0'
-    assert labs[Y] == 'X2'
+    assert labs[Y] == 'f'
     assert len(labs) == 4
 
 def test_get_colorsandsizes():
@@ -365,11 +364,11 @@ def test_get_colorsandsizes():
     assert len(cols)== 4
     assert len(sizes) == 4
 
-def test_draw_graph():
-    X = ADnum(1, der =1)
-    Y = ADmath.sin(X)+3
-    fig = ADgraph.draw_graph(Y)
-    assert type(fig) == matplotlib.figure.Figure
+#def test_draw_graph():
+ #   X = ADnum(1, der =1)
+  #  Y = ADmath.sin(X)+3
+   # fig = ADgraph.draw_graph(Y)
+    #assert type(fig) == matplotlib.figure.Figure
 
 def test_gen_table():
     X = ADnum(1, der =1)
@@ -384,4 +383,74 @@ def test_plot_ADnum():
         return ADmath.sin(x)
     fig = ADgraph.plot_ADnum(Y)
     assert type(fig)==matplotlib.figure.Figure
-    
+
+#tests from developer documentation
+def test_scalarf_scalarv_1():
+    x = ADnum(3, ins=2, ind=0)
+    y = ADnum(4, ins=2, ind=1)
+    f = 2*y+2*x**2
+    assert f.val == 26
+    assert np.array_equal(f.der, np.array([12, 2]))
+    assert x.val ==3
+    assert np.array_equal(x.der, np.array([1, 0]))
+    assert y.val == 4
+    assert np.array_equal(y.der, np.array([0, 1]))
+
+def test_scalarf_scalarv_2():
+    x=ADnum(np.pi, der = [1])
+    f = ADmath.sin(x)
+
+    assert f.val == np.sin(np.pi)
+    assert np.array_equal(f.der, np.array([-1]))
+    assert x.val == np.pi
+    assert np.array_equal(x.der, np.array([1]))
+
+def test_f_defined():
+    def f(x):
+        return x+ADmath.exp(x)
+    y = ADnum(1, der = [1])
+    assert f(y).val == 1+np.exp(1)
+    assert np.array_equal(f(y).der, np.array([1+np.exp(1)]))
+
+def test_multi_input():
+    x = ADnum(2, ins=2, ind = 0)
+    y = ADnum(3, ins = 2, ind = 1)
+    f = 3*x**3+2*y**3
+    assert f.val == 78
+    assert np.array_equal(f.der, np.array([36, 54]))
+    assert x.val == 2
+    assert y.val == 3
+    assert np.array_equal(x.der, np.array([1, 0]))
+    assert np.array_equal(y.der, np.array([0, 1]))
+
+def test_vector_func_vector_input():
+    x = ADnum(2, ins=2, ind = 0)
+    y = ADnum(3, ins=2, ind = 1)
+    F = [x**2, x+y, 4*y]
+    assert F[0].val == 4
+    assert np.array_equal(F[0].der, np.array([4, 0]))
+    assert F[1].val == 5
+    assert np.array_equal(F[1].der, np.array([1, 1]))
+    assert F[2].val == 12
+    assert np.array_equal(F[2].der, np.array([0,4]))
+
+def test_vector_input():
+    X = ADnum([1,2,3], ins=1, ind=0)
+    f = 3*X+ADmath.exp(X)
+    assert np.array_equal(f.val, np.array([3+np.exp(1), 6+np.exp(2), 9+np.exp(3)]))
+    assert np.array_equal(f.der, np.array([3+np.exp(1), 3+np.exp(2), 3+np.exp(3)]))
+    assert np.array_equal(X.val, np.array([1,2,3]))
+    assert np.array_equal(X.der, np.array([1,1,1]))
+
+def test_multivector_input():
+    X = ADnum([1,2,1], ins=2, ind=0)
+    Y = ADnum([4,5,6], ins=2, ind=1)
+    G = X+Y
+    assert np.array_equal(G.val, np.array([5, 7, 7]))
+    assert np.array_equal(G.der, np.array([[1, 1, 1], [1, 1, 1]]))
+    assert np.array_equal(X.val, np.array([1, 2, 1]))
+    assert np.array_equal(X.der, np.array([[1, 1, 1],[0,0,0]]))
+    assert np.array_equal(Y.val, np.array([4, 5,6]))
+    assert np.array_equal(Y.der, np.array([[0,0,0],[1,1,1]]))
+
+
