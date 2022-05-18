@@ -15,5 +15,9 @@ Thus, this repository offers three learning levels for students seeking to learn
 * Students who have been introduced to the basic concepts behind automatic differentiation and who are seeking a tool to support their understanding should use the web app directly.
 * Students who are advanced programmers and want to advance their understanding of automatic differentiation through code may download the full package.  These students should refer to [`DeveloperDocumentation.ipynb`](./DeveloperDocumentation.ipynb) in this repository for more details on installation and package documentation.
 
-
 This work is an extension of a final project by Lindsey Brown, Xinyue Wang, and Kevin Yoon for Harvard IACS CS207: Systems Development for Computational Science. 
+
+## Contributing to This Software
+To report any issues or seek support in using this software, users should open a new issue.
+
+To contribute to this software, users should follow the guidelines outlined in the Future Work section of the ['DeveloperDocumentation'](./DeveloperDocumentation.ipynb) by working from a new branch and creating a pull request for the proposed update.
