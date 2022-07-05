@@ -50,10 +50,10 @@ of applications.
 # Content
 The content available in the [Auto-eD package](https://github.com/lindseysbrown/Auto-eD) contains a software package capable
 of performing automatic differentiation for a function and visualizing this calculation in a table and graphs. Additionally,
-the `Auto-eD` package content contains a learning unit for teaching automatic differentiation through an easily-accessible
+the `Auto-eD` package content contains a unit consisting of four learning module for teaching automatic differentiation through an easily-accessible
 web application based on this software.
 
-This module provides content for students at three different levels of experience.  Advanced students, familiar with both coding
+This unit provides content for students at three different levels of experience.  Advanced students, familiar with both coding
 and automatic differentiation, may use the `Auto-eD` package as described in Auto-eD Visualization Software.  Students who have
 learned the principles behind automatic differentiation but are less comfortable with coding can test and enhance their understanding 
 by using the [web application](https://autoed.herokuapp.com) as described in Web Application.  Students who are new to automatic 
@@ -82,7 +82,7 @@ derivative at a specified evaluation point at each step of the graph. The figure
 interactive visualization that enables the user to systematically step through each step of reverse mode. The current step is
 highlighted with a bold, yellow arrow.
 
-![demo](AutoEdDemo.PNG)
+![Demonstration of Auto-eD web application.](AutoEdDemo.PNG)
 
 
 For ease of instructional use for students less familiar with Python and coding, `Auto-eD` is available as a [web
@@ -121,10 +121,10 @@ systems. Students in the Fall 2020 class used the web application, and their res
 # Learning Objectives
 Upon completion of this unit, students should be able to:
 
-- Explain why automatic differentiation is a valuable computational tool;
-- Decompose a function into a series of elementary operations and write out the associated graph structure;
-- Perform automatic differentiation for functions of single and multiple variables in the forward and reverse mode;
-- Start thinking about how to implement the forward mode of automatic differentiation in software.
+i. Explain why automatic differentiation is a valuable computational tool;
+ii. Decompose a function into a series of elementary operations and write out the associated graph structure;
+iii. Perform automatic differentiation for functions of single and multiple variables in the forward and reverse mode;
+iv. Start thinking about how to implement the forward mode of automatic differentiation in software.
 
 
 # Acknowledgements
