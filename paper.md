@@ -50,7 +50,7 @@ of applications.
 # Content
 The content available in the [Auto-eD package](https://github.com/lindseysbrown/Auto-eD) contains a software package capable
 of performing automatic differentiation for a function and visualizing this calculation in a table and graphs. Additionally,
-the `Auto-eD` package content contains a unit consisting of four learning module for teaching automatic differentiation through an easily-accessible
+the `Auto-eD` package content contains a unit consisting of four learning modules for teaching automatic differentiation through an easily-accessible
 web application based on this software.
 
 This unit provides content for students at three different levels of experience.  Advanced students, familiar with both coding
