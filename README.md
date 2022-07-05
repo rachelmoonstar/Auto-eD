@@ -1,6 +1,8 @@
 # Auto-eD
 [![version](https://img.shields.io/badge/version-1.0.2-yellow.svg)](https://semver.org)
 
+[![DOI](https://zenodo.org/badge/262339852.svg)](https://zenodo.org/badge/latestdoi/262339852)
+
 [![Documentation Status](https://readthedocs.org/projects/auto-ed/badge/?version=latest)](https://auto-ed.readthedocs.io/en/latest/?badge=latest)
 
 ![Example](AutoEdCover.png)
