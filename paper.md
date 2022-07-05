@@ -31,12 +31,6 @@ learning algorithms, and neural networks in particular, was partly enabled by th
 algorithms that rely on automatic differentiation, and the evolution towards differential programming paradigms
 [@innes2019differentiable], it is important that students be taught the basics of this key family of algorithms.
 
-<!--Recent research has shown the growing power of machine learning to analyze data, build models, and
-predict outcomes, particularly through the use of neural networks.  Automatic differentiation is the basic concept underlying
-the backpropagation algorithm, typically employed to fit these neural networks.  However, automatic differentiation is not
-limited to this application but is a powerful computational tool for a range of applications, making it important for
-students to understand the basics of automatic differentiation.-->
-
 Automatic differentiation is a method of computing derivatives to machine precision based on the decomposition of functions
 into a series of elementary operations. These operations can be conceptualized as forming a graph structure. This graph can
 be traversed in the forward or reverse direction, giving rise to the two primary modes in automatic differentiation. The goal
@@ -64,7 +58,7 @@ and automatic differentiation, may use the `Auto-eD` package as described in Aut
 learned the principles behind automatic differentiation but are less comfortable with coding can test and enhance their understanding 
 by using the [web application](https://autoed.herokuapp.com) as described in Web Application.  Students who are new to automatic 
 differentiation and want to learn this concept should work through the automatic differentiation unit (available on 
-[Read the Docs](https://auto-ed.readthedocs.io/en/latest), which includes excerises and tutorials using the web application, as 
+[Read the Docs](https://auto-ed.readthedocs.io/en/latest)), which includes excerises and tutorials using the web application, as 
 described in Accompanying Automatic Differentiation Unit.
 
 ## Auto-eD Visualization Software
@@ -82,8 +76,8 @@ Python and coding.
 This software and associated web application are valuable pedagogical tools because they allow students to view the
 computational graph in both forward and reverse mode alongside the computational table. This makes it easy for students to
 relate the table and the graph as well as compare the differences in graph traversal of the forward and reverse mode. An
-example output from the web application is below. The first row shows the computational graphs for the forward (left) and
-reverse (right) modes of automatic differentiation. The table in the second row shows the values of the function and it's
+example output from the web application is shown below. The first row shows the computational graphs for the forward (left) and
+reverse (right) modes of automatic differentiation. The table in the second row shows the values of the function and its
 derivative at a specified evaluation point at each step of the graph. The figure in the bottom right shows a snapshot of an
 interactive visualization that enables the user to systematically step through each step of reverse mode. The current step is
 highlighted with a bold, yellow arrow.
@@ -122,14 +116,15 @@ A similar structure of course modules has been used to teach these concepts in t
 for Applied Computational Science at Harvard since Fall 2018. In Fall 2019, the course introduced a GUI based on portions of
 this software to help students with the graph visualization, which received positive feedback from students taking the
 course. This GUI has since been refactored for the web interface, making it more accessible across different operating
-systems. Students in the Fall 2020 class used web application and responses were positive.
+systems. Students in the Fall 2020 class used the web application, and their responses were positive.
 
 # Learning Objectives
 Upon completion of this unit, students should be able to:
-- Explain why automatic differentiation is a valuable computational tool
-- Decompose a function into a series of elementary operations and write out the associated graph structure
-- Perform automatic differentiation for functions of single and multiple variables in the forward and reverse mode
-- Start thinking about how to implement the forward mode of automatic differentiation in software
+
+- Explain why automatic differentiation is a valuable computational tool;
+- Decompose a function into a series of elementary operations and write out the associated graph structure;
+- Perform automatic differentiation for functions of single and multiple variables in the forward and reverse mode;
+- Start thinking about how to implement the forward mode of automatic differentiation in software.
 
 
 # Acknowledgements
